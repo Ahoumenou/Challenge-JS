@@ -10,7 +10,7 @@ let fahrenheitImp = fahrenheit.map((el, i) => i % 2 === 0 ? '*' : el)
 console.log(fahrenheitImp);
 
 /*******************************
- #1 (8kyu)
+ #1  Nombre de personnes dans le bus  (8kyu)
  * ********************************* */
 let number1 = [[10, 0], [3, 5], [5, 8]]
 let number2 = [[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]
@@ -30,7 +30,7 @@ console.log(NbrPer(number3));
 // console.log( result1);
 
 /*******************************
- #2 (8kyu)
+ #2  Nombre de moutons (8kyu)
  * ********************************* */
 let tab1 = [true, true, true, false,
     true, true, true, true,
@@ -49,14 +49,44 @@ function Count(tab) {
 
 console.log(Count(tab1)); 
 /*******************************
- #3 (8kyu)
+ #3  Enlever le premier et le dernier caractère d’une chaîne (8kyu)
+ * ********************************* */
+let varr = "Ceci est une phrase"
+
+console.log(varr.slice(1, varr.length - 1))
+
+/**Function équivalente */
+function removeChar(params) {
+    return params.slice(1, params.length - 1)
+}
+console.log(removeChar(varr));
+
+/*******************************
+ #4  Nettoyage de chaînes (8kyu)
  * ********************************* */
 
- function removeChar(params) {
-  params.join("")
+ function stringClean(params) {
+    return params.replace(/[0-9]/g, "")
  }
-let varr = "Ceci est une phrase"
-//  console.log(removeChar(varr));
+
+ let dd = "(E3at m2e2!!)"
+ console.log(stringClean(dd));
+
+ /*******************************
+ #5  Doubler les lettres  (8kyu)
+ * ********************************* */
+
+function doubleChar(params) {
+    return params.split('').map(el => el += el ).join('')
+}
+
+let str = 'string number';
+console.log(doubleChar(str));
+
+/*******************************
+#6   Supprimer les doublons  (8kyu)
+* ********************************* */
+
 
 
 
